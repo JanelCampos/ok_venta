@@ -172,11 +172,11 @@ function dibuja_tabla_ventas_por_familia(ventas) {
                     '<td>' +
                     (a.familia === "" ? "--Sin familia--" : a.familia) +
                     '</td>' +
-                    '<td> $' +
+                    '<td> S/.' +
                     a.total +
                     '</td>' +
                     '<td>' +
-                    '<strong>$' +
+                    '<strong> S/.' +
                     a.utilidad +
                     '</strong>' +
                     '</td>' +
@@ -190,11 +190,11 @@ function dibuja_tabla_ventas_por_familia(ventas) {
             '<td>' +
             'Totales' +
             '</td>' +
-            '<td> $' +
+            '<td> S/.' +
             total_por_familia +
             '</td>' +
             '<td>' +
-            '<strong>$' +
+            '<strong> S/.' +
             utilidad_por_familia +
             '</strong>' +
             '</td>' +
@@ -306,8 +306,8 @@ function dibuja_tabla_ventas(ventas) {
                         $("<td>").html(ventas_totales[i].fecha),
                         $("<td>").html(ventas_totales[i].productos_como_html()),
                         $("<td>").html(ventas_totales[i].numero_productos),
-                        $("<td>").html("$" + ventas_totales[i].total),
-                        $("<td>").html("$" + ventas_totales[i].utilidad),
+                        $("<td>").html("S/." + ventas_totales[i].total),
+                        $("<td>").html("S/." + ventas_totales[i].utilidad),
                         $("<td>").html(ventas_totales[i].usuario)
                     )
             );

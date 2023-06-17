@@ -213,7 +213,7 @@ function dibujar_productos() {
                             .html(productos_vender[i].nombre),
 
                         $("<td>")
-                            .html("$" + productos_vender[i].precio_venta),
+                            .html("S/." + productos_vender[i].precio_venta),
 
                         $("<td>")
                             .html(
@@ -230,7 +230,7 @@ function dibujar_productos() {
                             ),
 
                         $("<td>")
-                            .html("$" + Math.round(productos_vender[i].total * 100) / 100),
+                            .html("S/." + Math.round(productos_vender[i].total * 100) / 100),
 
                         $("<td>")
                             .html(
@@ -246,7 +246,7 @@ function dibujar_productos() {
             );
     }
     ayudante_total = Math.round(ayudante_total * 100) / 100;
-    $("#contenedor_total").text("$" + ayudante_total).parent().show();
+    $("#contenedor_total").text("S/." + ayudante_total).parent().show();
     total = ayudante_total;
 }
 
@@ -254,7 +254,7 @@ function dibujar_productos() {
 function preparar_para_realizar_venta() {
     if (productos_vender.length > 0) {
         $("#modal_procesar_venta").modal("show");
-        $("#contenedor_total_modal").text("$" + total).parent().show();
+        $("#contenedor_total_modal").text("S/." + total).parent().show();
     }
 }
 function deshabilita_para_venta() {
